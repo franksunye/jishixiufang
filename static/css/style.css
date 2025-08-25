@@ -1,0 +1,441 @@
+@font-face {
+  font-family: 'Inter';
+  src: url('fonts/Inter-Regular.woff2') format('woff2'),
+    url('fonts/Inter-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('fonts/Inter-Bold.woff2') format('woff2'), url('fonts/Inter-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  font-size: 16px;
+}
+.banner {
+  width: 100vw;
+  display: flex;
+}
+.form {
+  padding: 40px 20px 60px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.form-field {
+  width: 280px;
+  height: 50px;
+  box-sizing: border-box;
+  border-radius: 12px;
+  background-color: #f4f4f4;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+}
+/* 级联选择器左侧图标 */
+.form-icon-cascade {
+  margin-right: 5px;
+}
+/* 表单占位文本颜色 */
+.form-field .el-input__inner::placeholder {
+  color: #000000;
+}
+.form-field .el-input__inner::-webkit-input-placeholder {
+  color: #000000;
+}
+.form-field .el-input__inner:-moz-placeholder {
+  color: #000000;
+}
+.form-field .el-input__inner {
+  text-align: center;
+  font-size: 19px;
+}
+/* 选择器右侧箭头 */
+.form-field .el-input__icon {
+  color: #000000 !important;
+  width: 35px;
+}
+/* 输入框 */
+.form-input {
+  flex: 1;
+  height: 100%;
+}
+.form-input .el-input__inner {
+  height: 100%;
+  border: none;
+  background: transparent;
+  padding: 0 30px 0 0;
+  color: #000000;
+}
+/* 去掉数字输入框右侧上下箭头控制器 */
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+/* 级联 */
+.form-cascade {
+  flex: 1;
+  height: 100%;
+}
+.form-cascade .el-input__inner {
+  height: 50px;
+  background: transparent;
+  border: none;
+  color: #000000;
+  padding-left: 0;
+}
+.form-cascade .el-input__suffix {
+  color: #000000;
+}
+.el-cascader-menu {
+  font-size: 16px;
+}
+.el-select-dropdown__item {
+  font-size: 16px;
+}
+/* 下拉 */
+.form-select {
+  flex: 1;
+}
+.form-select .el-input__inner {
+  height: 50px;
+  background: transparent;
+  border: none;
+  color: #000000;
+  padding-left: 0;
+}
+/* 按钮 */
+.form-button {
+  width: 280px;
+  height: 50px;
+  box-sizing: border-box;
+  border-radius: 12px;
+  color: #fff;
+  background-color: #ff5400;
+  font-weight: bold;
+  text-align: center;
+  line-height: 50px;
+  cursor: pointer;
+  font-size: 24px;
+}
+.form-button:hover {
+  background-color: #ff5400;
+}
+@media (max-width: 920px) {
+  .form-field,
+  .form-button {
+    min-width: 100%;
+  }
+}
+
+/* 流程 */
+.flow {
+  padding: 40px 20px 60px;
+}
+.flow-title {
+  font-size: 40px;
+  line-height: 60px;
+  font-weight: 700;
+  text-align: center;
+}
+.flow-content {
+  font-size: 28px;
+  line-height: 40px;
+  font-weight: 300;
+  text-align: center;
+  margin: 20px 0 70px;
+}
+.flow-content-pc {
+  display: block;
+}
+.flow-content-phone {
+  display: none;
+}
+.flow-steps {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+.flow-step-image {
+  display: flex;
+  height: 128px;
+}
+@media (max-width: 1200px) {
+  .flow-steps {
+    max-width: 550px;
+    margin: 0 auto;
+  }
+}
+
+/* 套餐 */
+.package {
+  background-color: #fafafa;
+  padding: 40px 20px 60px;
+}
+.package-title {
+  font-size: 40px;
+  line-height: 60px;
+  font-weight: 700;
+  text-align: center;
+}
+.package-items {
+  padding: 45px 50px;
+  background-color: #fff;
+  border-radius: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1200px;
+  box-sizing: border-box;
+  margin: 25px auto 0;
+}
+.package-item {
+  flex: 1;
+  min-width: 245px;
+}
+.package-item > div {
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+}
+.package-item-image {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+.package-item-title {
+  font-size: 15px;
+  line-height: 24px;
+  font-weight: 600;
+}
+.package-item-subtitle {
+  font-size: 15px;
+  line-height: 24px;
+  font-weight: 300;
+}
+.package-item-bottom {
+  margin-top: 5px;
+}
+.package-item-logo {
+  width: 28px;
+  margin-right: 8px;
+}
+.package-item-text {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+}
+@media (max-width: 1200px) {
+  .package-items {
+    max-width: 630px !important;
+  }
+}
+
+/* 案例 */
+.case {
+  background-color: #ff5400;
+  padding: 40px 20px 60px;
+}
+.case-title {
+  font-size: 40px;
+  line-height: 60px;
+  font-weight: 700;
+  text-align: center;
+  color: #fff;
+}
+.case-items {
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  max-width: 1200px;
+  box-sizing: border-box;
+  margin: 25px auto 0;
+}
+.case-image {
+  display: flex;
+  border-radius: 12px;
+  max-width: calc((100% - 15px) / 2);
+}
+@media (max-width: 1200px) {
+  .case-items {
+    max-width: 630px;
+  }
+  .case-image {
+    max-width: 100%;
+  }
+}
+
+/* 服务 */
+.service {
+  padding: 40px 20px 60px;
+}
+.service-title {
+  font-size: 40px;
+  line-height: 60px;
+  font-weight: 700;
+  text-align: center;
+}
+.service-content {
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 45px;
+  margin: 25px auto 70px;
+}
+.service-content > div {
+  display: flex;
+  align-items: center;
+}
+.service-icon {
+  display: flex;
+  margin-right: 5px;
+}
+.service-items {
+  display: flex;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1200px;
+  box-sizing: border-box;
+}
+.service-image {
+  width: 285px;
+}
+@media (max-width: 1200px) {
+  .service-items {
+    max-width: 630px;
+  }
+  .service-image {
+    width: calc((100% - 20px) / 2);
+  }
+}
+@media (max-width: 500px) {
+  .service-content {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* 联系 */
+.footer {
+  width: 100vw;
+  display: flex;
+}
+
+/* 报单成功弹窗 */
+[v-cloak] {
+  display: none;
+}
+.alert-overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000; /* 确保弹窗在最前方 */
+}
+.alert {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0 5px 10px 4px rgba(0, 0, 0, 0.13);
+  min-width: 420px;
+}
+
+.alert-content {
+  border-bottom: 1px solid #e6e6e6;
+  padding: 20px 20px 10px;
+}
+.alert-title {
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 5px;
+}
+.alert-message {
+  font-size: 14px;
+  line-height: 21px;
+  color: #898989;
+}
+.alert-button {
+  font-size: 16px;
+  color: #ff5400;
+  font-weight: 600;
+  line-height: 24px;
+  padding: 10px 16px;
+  cursor: pointer;
+}
+
+/* 不同屏幕响应式 */
+/* 手机 */
+@media (max-width: 767.98px) {
+  .alert {
+    min-width: unset;
+    width: calc(100vw - 40px);
+  }
+  .form {
+    padding-bottom: 40px;
+  }
+  .flow {
+    padding-top: 0;
+  }
+  .flow-content {
+    font-size: 16px;
+    margin: 0 0 40px;
+  }
+  .flow-step-image {
+    height: 105px !important;
+  }
+  .flow-title,
+  .package-title,
+  .case-title,
+  .service-title {
+    font-size: 23px;
+  }
+  .flow-content-pc {
+    display: none;
+  }
+  .flow-content-phone {
+    display: block;
+  }
+  .package-items {
+    padding: 20px;
+    gap: 30px;
+  }
+  .service-content {
+    margin: 0px auto 40px;
+    gap: 20px;
+  }
+}
+
+/* 平板 */
+/* @media (min-width: 768px) and (max-width: 991.98px) {
+} */
+/* 电脑 */
+/* @media (min-width: 992px) {
+} */
+
+/* 解决elementUI级联和下拉组件在ios端需要点击两次才能选中的问题 */
+.el-scrollbar .el-scrollbar__bar {
+  opacity: 1 !important;
+}

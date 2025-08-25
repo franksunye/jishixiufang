@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>专业房屋防水堵漏-吉柿修房-修不好全额退+质保十年+免费上门勘察</title>
+    <meta
+      name="keywords"
+      content="吉柿修房,吉柿,修链,防水补漏,防水维修,房屋维修,屋面漏水,屋面防水,卫生间漏水,卫生间防水,窗户漏水,窗户防水"
+    />
+    <meta
+      name="description"
+      content="吉柿修房提供普通屋面、上人露台、斜坡屋面、金属屋面、采光顶、窗户、卫生间、外墙等防水补漏维修服务，免费上门勘察、出具方案，透明报价单按平米计价一口价，修不好全额退，至高十年质保。服务范围涵盖北京、上海，可在线预约或拨打电话400-700-1918咨询。"
+    />
+    <!-- 引入Element样式 -->
+    <link rel="stylesheet" href="static/css/element-ui.css" />
+    <!-- 引入自定义 -->
+    <link href="static/css/style.css" rel="stylesheet" />
+    <!-- 引入浏览器标签图标 -->
+    <link rel="icon" href="static/image/favicon.ico" type="image/x-icon" />
+  </head>
+
+  <body>
+    <div id="app">
+      <!-- banner -->
+      <picture>
+        <source media="(min-width: 768px)" srcset="static/image/banner.jpeg" />
+        <source media="(max-width: 767.98px)" srcset="static/image/banner2.jpg" />
+        <img src="static/image/banner.jpeg" class="banner" />
+      </picture>
+      <!-- 报单 -->
+      <div class="form">
+        <div class="form-field">
+          <img src="static/image/icon_phone.png" />
+          <el-input
+            v-model="formData.phone"
+            :placeholder="phoneFocus ? '':'点击填写联系方式'"
+            type="number"
+            :maxlength="11"
+            :minlength="11"
+            class="form-input"
+            @focus="phoneFocus = true"
+            @blur="phoneFocus = false"
+            @input="phoneInput"
+          ></el-input>
+        </div>
+        <div class="form-field">
+          <img src="static/image/icon_address.png" class="form-icon-cascade" />
+          <el-cascader
+            v-model="formData.area"
+            :options="areaList"
+            :props="{ expandTrigger: 'hover' }"
+            placeholder="点击选择地区"
+            class="form-cascade"
+          ></el-cascader>
+        </div>
+        <div class="form-field">
+          <img src="static/image/icon_location.png" />
+          <el-select v-model="formData.repairPart" placeholder="选择维修部位" class="form-select">
+            <el-option
+              v-for="item in partList"
+              :key="item.value"
+              :label="item.label"
+              :value="item.value"
+            ></el-option>
+          </el-select>
+        </div>
+        <div class="form-button" @click="submit">预约免费上门勘察</div>
+      </div>
+      <!-- 流程 -->
+      <div class="flow">
+        <div class="flow-title">标准化维修方案 一站式维修服务</div>
+        <div class="flow-content">
+          <div>标准化服务覆盖6大常见渗漏部位</div>
+          <div class="flow-content-pc">工程师免费上门勘察，出具勘察报告，建立维修电子档案</div>
+          <div class="flow-content-phone">工程师免费上门勘察，出具勘察报告</div>
+          <div class="flow-content-phone">建立维修电子档案</div>
+          <div>标准报价单，透明无增项</div>
+        </div>
+        <div class="flow-steps">
+          <img src="static/image/step1.png" class="flow-step-image" />
+          <img src="static/image/step2.png" class="flow-step-image" />
+          <img src="static/image/step3.png" class="flow-step-image" />
+          <img src="static/image/step4.png" class="flow-step-image" />
+          <img src="static/image/step5.png" class="flow-step-image" />
+          <img src="static/image/step6.png" class="flow-step-image" />
+        </div>
+      </div>
+      <!-- 套餐 -->
+      <div class="package">
+        <div class="package-title">标准套餐 放心之选</div>
+        <div class="package-items">
+          <div class="package-item">
+            <img src="static/image/package1.jpeg" class="package-item-image" />
+            <div>
+              <span class="package-item-title">卫生间漏水维修</span>
+              <span class="package-item-subtitle">&nbsp;·&nbsp;一口价超值套餐</span>
+            </div>
+            <div class="package-item-bottom">
+              <img class="package-item-logo" src="static/image/icon_logo.png" />
+              <span class="package-item-text">1小时维修，24小时可用</span>
+            </div>
+          </div>
+          <div class="package-item">
+            <img src="static/image/package2.jpeg" class="package-item-image" />
+            <div>
+              <span class="package-item-title">屋顶漏水维修</span>
+              <span class="package-item-subtitle">&nbsp;·&nbsp;多种套餐任您挑选</span>
+            </div>
+            <div class="package-item-bottom">
+              <img class="package-item-logo" src="static/image/icon_logo.png" />
+              <span class="package-item-text">至高10年质保</span>
+            </div>
+          </div>
+          <div class="package-item">
+            <img src="static/image/package3.jpeg" class="package-item-image" />
+            <div>
+              <span class="package-item-title">外墙漏水维修</span>
+              <span class="package-item-subtitle">&nbsp;·&nbsp;标准维修套餐</span>
+            </div>
+            <div class="package-item-bottom">
+              <img class="package-item-logo" src="static/image/icon_logo.png" />
+              <span class="package-item-text">平米计价，便宜到家</span>
+            </div>
+          </div>
+          <div class="package-item">
+            <img src="static/image/package4.jpeg" class="package-item-image" />
+            <div>
+              <span class="package-item-title">窗户漏水维修</span>
+              <span class="package-item-subtitle">&nbsp;·&nbsp;一口价超值套餐</span>
+            </div>
+            <div class="package-item-bottom">
+              <img class="package-item-logo" src="static/image/icon_logo.png" />
+              <span class="package-item-text">3年质保享安心</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 案例 -->
+      <div class="case">
+        <div class="case-title">真实案例 好服务直观呈现</div>
+        <div class="case-items">
+          <img src="static/image/case1.png" class="case-image" />
+          <img src="static/image/case2.png" class="case-image" />
+          <img src="static/image/case3.png" class="case-image" />
+          <img src="static/image/case4.png" class="case-image" />
+        </div>
+      </div>
+      <!-- 服务 -->
+      <div class="service">
+        <div class="service-title">吉柿修房提供品质服务</div>
+        <div class="service-content">
+          <div>
+            <img src="static/image/icon_service1.png" class="service-icon" style="width: 19px" />
+            <span class="service-text">30秒响应 服务准时</span>
+          </div>
+          <div>
+            <img src="static/image/icon_service2.png" class="service-icon" style="width: 20px" />
+            <span class="service-text">标准套餐 透明报价</span>
+          </div>
+          <div>
+            <img src="static/image/icon_service3.png" class="service-icon" style="width: 21.5px" />
+            <span class="service-text">材料保真 假一赔十</span>
+          </div>
+          <div>
+            <img src="static/image/icon_service4.png" class="service-icon" style="width: 18px" />
+            <span class="service-text">私下收费 双倍返还</span>
+          </div>
+          <div>
+            <img src="static/image/icon_service5.png" class="service-icon" style="width: 15.5px" />
+            <span class="service-text">质保承诺 定期巡检</span>
+          </div>
+        </div>
+        <div class="service-items">
+          <img src="static/image/service1.jpg" class="service-image" />
+          <img src="static/image/service2.jpg" class="service-image" />
+          <img src="static/image/service3.jpg" class="service-image" />
+          <img src="static/image/service4.jpg" class="service-image" />
+        </div>
+      </div>
+      <!-- 联系 -->
+      <picture>
+        <source media="(min-width: 768px)" srcset="static/image/footer.jpg" />
+        <source media="(max-width: 767.98px)" srcset="static/image/footer2.jpg" />
+        <img src="static/image/footer.jpeg" class="footer" />
+      </picture>
+      <!-- 提交表单校验弹窗 -->
+      <div class="alert-overlay" v-cloak v-if="alert">
+        <div class="alert">
+          <div class="alert-content">
+            <div class="alert-title">提示</div>
+            <div class="alert-message">
+              <div>{{alertMessage}}</div>
+            </div>
+          </div>
+          <div class="alert-button" @click="alertClick">我知道了</div>
+        </div>
+      </div>
+      <!-- 报单成功弹窗 -->
+      <div class="alert-overlay" v-cloak v-if="submitAlert">
+        <div class="alert">
+          <div class="alert-content">
+            <div class="alert-title">预约成功</div>
+            <div class="alert-message">
+              <div>工程师将于30分钟内与您取得联系</div>
+              <div>请注意陌生来电</div>
+            </div>
+          </div>
+          <div class="alert-button" @click="submitAlertClick">我知道了</div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <!-- 引入Vue -->
+  <script src="static/js/vue.min.js"></script>
+  <!-- 引入Element组件库 -->
+  <script src="static/js/element-ui.js"></script>
+  <!-- 引入省市区文件 -->
+  <script src="static/js/area.js"></script>
+  <!-- 引入axios -->
+  <script src="static/js/axios.min.js"></script>
+  <script type="module">
+    new Vue({
+      el: '#app',
+      data: function () {
+        return {
+          phoneFocus: false, // 手机号输入框是否获取焦点
+          submitAlert: false, // 报单成功后的弹窗展示
+          alert: false,
+          alertMessage: '',
+          areaList,
+          partList: [
+            { label: '屋面', value: '1' },
+            { label: '卫生间', value: '2' },
+            { label: '厨房', value: '7' },
+            { label: '窗户', value: '3' },
+            { label: '外墙', value: '4' },
+            { label: '地下室', value: '5' },
+            { label: '其他', value: '6' }
+          ],
+          formData: {
+            phone: '',
+            area: [],
+            repairPart: '',
+            exts: {}
+          }
+        };
+      },
+      methods: {
+        phoneInput(value) {
+          if (value.length > 11) {
+            this.formData.phone = value.slice(0, 11);
+          }
+        },
+        submit() {
+          // 校验手机号
+          if (!this.formData.phone) {
+            this.alertMessage = '请填写联系方式';
+            this.alert = true;
+            return;
+          } else if (!/^1[3-9]\d{9}$/.test(this.formData.phone)) {
+            this.alertMessage = '手机号格式不正确';
+            this.alert = true;
+            return;
+          } else {
+            this.formData.title = this.formData.phone + '吉柿官网报单';
+            this.formData.name = this.formData.phone;
+          }
+          // 检验地区
+          if (!this.formData.area || this.formData.area.length == 0) {
+            this.alertMessage = '请选择地区';
+            this.alert = true;
+            return;
+          } else {
+            this.formData.province = this.formData.area[0];
+            this.formData.city = this.formData.area[1];
+            this.formData.district = this.formData.area[2];
+          }
+          // 校验维修部位
+          if (!this.formData.repairPart) {
+            this.alertMessage = '请选择维修部位';
+            this.alert = true;
+            return;
+          } else {
+            // 处理成报单维修部位数据结构
+            this.formData.exts.leakagesite = [[this.formData.repairPart]];
+            this.formData.exts.leakagesite_copy = [this.formData.repairPart];
+          }
+          // 吉柿官网报单默认值
+          // 信息渠道
+          this.formData.channel = ['48', '4820', '4820030']; // 网络搜索/官网/吉柿官网
+          // 信息来源
+          this.formData.exts.sourceType = '6'; // 吉柿平台单
+          // 留咨时间
+          this.formData.exts.retentionDate = String(new Date().toLocaleString()).replace(
+            /\//g,
+            '-'
+          );
+          axios
+            .post(
+              'https://xlink.fsgo365.cn/fsgo/s/upsert.do?id=8666699125007255528',
+              JSON.stringify(this.formData),
+              {
+                headers: {
+                  'Content-type': 'application/json;charset=utf-8'
+                }
+              }
+            )
+            .then(response => {
+              this.submitAlert = true;
+            })
+            .catch(error => {
+              console.log(error);
+            });
+        },
+        alertClick() {
+          this.alertMessage = '';
+          this.alert = false;
+        },
+        submitAlertClick() {
+          this.submitAlert = false;
+          this.formData = {
+            phone: '',
+            area: [],
+            repairPart: '',
+            exts: {}
+          };
+        }
+      }
+    });
+  </script>
+</html>
