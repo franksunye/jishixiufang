@@ -1,0 +1,31 @@
+User-agent: *
+Allow: /
+
+# 允许搜索引擎抓取所有内容
+Allow: /static/
+Allow: /static/css/
+Allow: /static/js/
+Allow: /static/image/
+
+# 禁止抓取敏感或无用页面（如果有的话）
+# Disallow: /admin/
+# Disallow: /private/
+
+# 网站地图位置
+Sitemap: https://yourdomain.com/sitemap.xml
+
+# 抓取延迟（可选，避免服务器压力过大）
+Crawl-delay: 1
+
+# 针对特定搜索引擎的设置
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 1
+
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Sogou web spider
+Allow: /
+Crawl-delay: 1
