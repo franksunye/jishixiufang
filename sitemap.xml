@@ -20,8 +20,7 @@
     <priority>1.0</priority>
   </url>
 
-  <!-- 未来可添加的服务页面 -->
-  <!--
+  <!-- 服务页面 -->
   <url>
     <loc>https://jishixiufang.com/services/weishenjian-fangshui.html</loc>
     <lastmod>2025-01-25</lastmod>
@@ -50,6 +49,8 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- 未来可添加的页面 -->
+  <!--
   <url>
     <loc>https://jishixiufang.com/about.html</loc>
     <lastmod>2025-01-25</lastmod>
