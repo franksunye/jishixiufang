@@ -49,8 +49,7 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- 未来可添加的页面 -->
-  <!--
+  <!-- 公司页面 -->
   <url>
     <loc>https://jishixiufang.com/about.html</loc>
     <lastmod>2025-01-25</lastmod>
@@ -71,6 +70,5 @@
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
-  -->
 
 </urlset>
