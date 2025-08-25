@@ -12,7 +12,7 @@ Allow: /static/image/
 # Disallow: /private/
 
 # 网站地图位置
-Sitemap: https://yourdomain.com/sitemap.xml
+Sitemap: https://jishixiufang.com/sitemap.xml
 
 # 抓取延迟（可选，避免服务器压力过大）
 Crawl-delay: 1
