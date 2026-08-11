@@ -29,27 +29,106 @@
     <link href="static/css/style.css" rel="stylesheet" />
     <link rel="icon" href="static/image/favicon.ico" type="image/x-icon" />
     
+    <link rel="canonical" href="https://jishixiufang.com/contact.html" />
+    <meta property="og:locale" content="zh_CN" />
+
+    <!-- 结构化数据 - 面包屑 -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://jishixiufang.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "联系我们",
+          "item": "https://jishixiufang.com/contact.html"
+        }
+      ]
+    }
+    </script>
+
     <!-- 结构化数据 -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "ContactPage",
       "name": "联系吉柿修房",
-      "description": "吉柿修房防水补漏服务联系方式",
+      "description": "吉柿修房防水补漏服务联系方式，24小时服务热线400-700-1918",
       "mainEntity": {
-        "@type": "LocalBusiness",
+        "@type": "HomeAndConstructionBusiness",
+        "@id": "https://jishixiufang.com/#business",
         "name": "吉柿修房",
         "telephone": "400-700-1918",
         "url": "https://jishixiufang.com",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "北京",
-          "addressRegion": "北京市",
-          "addressCountry": "CN"
-        },
+        "address": [
+          {
+            "@type": "PostalAddress",
+            "addressLocality": "北京",
+            "addressRegion": "北京市",
+            "addressCountry": "CN"
+          },
+          {
+            "@type": "PostalAddress",
+            "addressLocality": "上海",
+            "addressRegion": "上海市",
+            "addressCountry": "CN"
+          }
+        ],
         "openingHours": "Mo-Su 08:00-20:00",
-        "areaServed": ["北京", "上海"]
+        "areaServed": [
+          {"@type": "City", "name": "北京"},
+          {"@type": "City", "name": "上海"}
+        ]
       }
+    }
+    </script>
+
+    <!-- 结构化数据 - FAQ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "上门勘察收费吗？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "完全免费！我们提供免费上门勘察服务，专业工程师会详细检查漏水情况，制定维修方案，不收取任何费用。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "多长时间能上门？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "正常情况下24小时内安排上门，紧急情况可提供当天上门服务。客服会在30分钟内与您联系确定具体时间。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "质保期是多长？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "根据不同的维修项目，我们提供1-10年不等的质保期。具体质保时间会在合同中明确约定，质保期内出现问题免费维修。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "价格如何计算？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "我们采用透明报价体系，根据维修面积、材料选择、施工难度等因素综合定价。勘察后会提供详细报价单，价格透明无隐形收费。"
+          }
+        }
+      ]
     }
     </script>
 
@@ -67,29 +146,42 @@
   <body>
     <div id="app">
       <!-- 导航 -->
-      <nav style="padding: 20px; background: #f8f9fa; text-align: center;">
-        <a href="index.html" style="color: #409EFF; text-decoration: none; margin-right: 20px;">← 返回首页</a>
-        <span style="color: #666;">联系我们</span>
-      </nav>
+      <header role="banner">
+        <nav aria-label="主导航" style="padding: 15px 0; background: rgba(255,255,255,0.95); text-align: center; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+          <div style="max-width: 800px; margin: 0 auto;">
+            <a href="index.html" style="color: #FF6900; text-decoration: none; margin: 0 20px; font-weight: bold;">首页</a>
+            <a href="services/weishenjian-fangshui.html" style="color: #666; text-decoration: none; margin: 0 15px;">卫生间防水</a>
+            <a href="services/wumian-fangshui.html" style="color: #666; text-decoration: none; margin: 0 15px;">屋面防水</a>
+            <a href="services/waiqiang-fangshui.html" style="color: #666; text-decoration: none; margin: 0 15px;">外墙防水</a>
+            <a href="services/chuanghu-fangshui.html" style="color: #666; text-decoration: none; margin: 0 15px;">窗户防水</a>
+            <a href="cases.html" style="color: #666; text-decoration: none; margin: 0 15px;">成功案例</a>
+            <a href="about.html" style="color: #666; text-decoration: none; margin: 0 15px;">关于我们</a>
+            <a href="contact.html" style="color: #FF6900; text-decoration: none; margin: 0 15px; font-weight: bold;">联系我们</a>
+          </div>
+        </nav>
+      </header>
+
+      <main role="main" id="main-content">
+        <!-- 面包屑 -->
+
+        <h1 style="display:none;">联系吉柿修房 - 防水补漏服务热线400-700-1918</h1>
 
       <!-- 联系横幅 -->
-      <div style="position: relative; text-align: center; margin-bottom: 40px;">
-        <img src="static/image/footer.jpg" style="width: 100%; max-height: 400px; object-fit: cover;" alt="联系吉柿修房" />
-        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.7);">
-          <h1 style="font-size: 2.5em; margin: 0;">联系我们</h1>
-          <p style="font-size: 1.5em; margin: 10px 0;">400-700-1918</p>
+      <section aria-label="联系横幅">
+        <div style="position: relative; text-align: center; margin-bottom: 40px;">
+          <img src="static/image/footer.jpg" style="width: 100%; max-height: 400px; object-fit: cover;" alt="联系吉柿修房" />
         </div>
-      </div>
+      </section>
 
       <!-- 联系方式 -->
-      <div class="flow" style="padding: 40px 20px;">
-        <div class="flow-title">联系方式</div>
+      <section aria-labelledby="contact-title" class="flow" style="padding: 40px 20px;">
+        <h2 id="contact-title" class="flow-title">联系方式</h2>
         <div style="max-width: 800px; margin: 0 auto;">
           <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 30px;">
             <div style="text-align: center; background: #f8f9fa; padding: 30px; border-radius: 10px;">
-              <div style="width: 80px; height: 80px; background: #409EFF; border-radius: 50%; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; color: white; font-size: 30px;">📞</div>
+              <div style="width: 80px; height: 80px; background: #FF6900; border-radius: 50%; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; color: white; font-size: 30px;">📞</div>
               <h3 style="color: #333; margin-bottom: 15px;">服务热线</h3>
-              <p style="font-size: 24px; color: #409EFF; font-weight: bold; margin-bottom: 10px;">400-700-1918</p>
+              <p style="font-size: 24px; color: #FF6900; font-weight: bold; margin-bottom: 10px;">400-700-1918</p>
               <p style="color: #666;">24小时客服热线</p>
               <p style="color: #666;">30分钟内响应</p>
             </div>
@@ -101,25 +193,17 @@
               <p style="color: #333; font-weight: bold;">周一至周日 8:00-20:00</p>
               <p style="color: #E6A23C; font-weight: bold;">24小时应急服务</p>
             </div>
-            
-            <div style="text-align: center; background: #f8f9fa; padding: 30px; border-radius: 10px;">
-              <div style="width: 80px; height: 80px; background: #E6A23C; border-radius: 50%; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; color: white; font-size: 30px;">📍</div>
-              <h3 style="color: #333; margin-bottom: 15px;">服务区域</h3>
-              <p style="color: #333; font-weight: bold; margin-bottom: 10px;">北京市全区域</p>
-              <p style="color: #333; font-weight: bold; margin-bottom: 10px;">上海市全区域</p>
-              <p style="color: #666;">免费上门勘察</p>
-            </div>
           </div>
         </div>
-      </div>
+      </section>
 
       <!-- 服务流程 -->
-      <div style="background: #f8f9fa; padding: 40px 20px;">
+      <section aria-labelledby="process-title" style="background: #f8f9fa; padding: 40px 20px;">
         <div style="max-width: 800px; margin: 0 auto;">
-          <h2 style="text-align: center; color: #333; margin-bottom: 40px;">联系服务流程</h2>
+          <h2 id="process-title" style="text-align: center; color: #333; margin-bottom: 40px;">联系服务流程</h2>
           <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
             <div style="text-align: center; background: white; padding: 20px; border-radius: 10px;">
-              <div style="width: 60px; height: 60px; background: #409EFF; border-radius: 50%; margin: 0 auto 15px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 20px;">1</div>
+              <div style="width: 60px; height: 60px; background: #FF6900; border-radius: 50%; margin: 0 auto 15px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 20px;">1</div>
               <h4 style="color: #333; margin-bottom: 10px;">拨打热线</h4>
               <p style="color: #666; font-size: 14px;">拨打400-700-1918<br/>或在线预约</p>
             </div>
@@ -140,11 +224,11 @@
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
       <!-- 常见问题 -->
-      <div class="flow" style="padding: 40px 20px;">
-        <div class="flow-title">常见问题</div>
+      <section aria-labelledby="faq-title" class="flow" style="padding: 40px 20px;">
+        <h2 id="faq-title" class="flow-title">常见问题</h2>
         <div style="max-width: 800px; margin: 0 auto;">
           <div style="margin-top: 30px;">
             <div style="background: white; border: 1px solid #e4e7ed; border-radius: 8px; margin-bottom: 15px;">
@@ -184,10 +268,10 @@
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
       <!-- 在线预约表单 -->
-      <div class="form" style="background: #409EFF; padding: 40px 20px; text-align: center;">
+      <section aria-label="在线预约" class="form" style="background: #FF6900; padding: 40px 20px; text-align: center;">
         <h2 style="color: white; margin-bottom: 30px;">在线预约服务</h2>
         <div style="max-width: 500px; margin: 0 auto;">
           <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 20px;">
@@ -221,37 +305,44 @@
         <p style="color: white; margin-top: 20px; font-size: 14px;">
           提交后工程师将于30分钟内与您联系 | 或直接拨打：400-700-1918
         </p>
-      </div>
+      </section>
+      </main>
 
       <!-- 页脚 -->
-      <footer style="background: #333; color: white; text-align: center; padding: 30px 20px;">
-        <div style="max-width: 800px; margin: 0 auto;">
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; margin-bottom: 20px; text-align: left;">
-            <div>
-              <h4 style="margin-bottom: 15px;">联系信息</h4>
-              <p>服务热线：400-700-1918</p>
-              <p>服务时间：8:00-20:00</p>
-              <p>应急服务：24小时</p>
+      <footer role="contentinfo" style="background: #333; color: white; text-align: center; padding: 20px;">
+        <address style="font-style: normal;">
+          <div style="max-width: 800px; margin: 0 auto;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; margin-bottom: 20px; text-align: left;">
+              <div>
+                <h4 style="margin-bottom: 15px;">联系信息</h4>
+                <p>服务热线：<a href="tel:4007001918" style="color: #FF6900;">400-700-1918</a></p>
+                <p>服务时间：8:00-20:00</p>
+                <p>应急服务：24小时</p>
+              </div>
+              <div>
+                <h4 style="margin-bottom: 15px;">服务项目</h4>
+                <p><a href="services/weishenjian-fangshui.html" style="color: #FF6900; text-decoration: none;">卫生间防水补漏</a></p>
+                <p><a href="services/wumian-fangshui.html" style="color: #FF6900; text-decoration: none;">屋面防水补漏</a></p>
+                <p><a href="services/waiqiang-fangshui.html" style="color: #FF6900; text-decoration: none;">外墙防水补漏</a></p>
+                <p><a href="services/chuanghu-fangshui.html" style="color: #FF6900; text-decoration: none;">窗户防水补漏</a></p>
+              </div>
             </div>
-            <div>
-              <h4 style="margin-bottom: 15px;">服务区域</h4>
-              <p>北京市全区域</p>
-              <p>上海市全区域</p>
-              <p>免费上门勘察</p>
-            </div>
-            <div>
-              <h4 style="margin-bottom: 15px;">服务项目</h4>
-              <p>卫生间防水补漏</p>
-              <p>屋面防水补漏</p>
-              <p>外墙防水补漏</p>
-              <p>窗户防水补漏</p>
+            <div style="border-top: 1px solid #555; padding-top: 20px; text-align: center;">
+              <p>© 2026— 吉柿修房直营防水维修服务</p>
+              <p>网站：<a href="https://jishixiufang.com" style="color: #FF6900;">jishixiufang.com</a></p>
             </div>
           </div>
-          <div style="border-top: 1px solid #555; padding-top: 20px; text-align: center;">
-            <p>© 2025 吉柿修房 - 专业防水补漏服务</p>
-            <p>网站：https://jishixiufang.com</p>
-          </div>
-        </div>
+        </address>
+        <nav aria-label="站内链接" style="margin-top: 10px;">
+          <a href="index.html" style="color: #FF6900; text-decoration: none; margin: 0 10px;">首页</a>
+          <a href="services/weishenjian-fangshui.html" style="color: #FF6900; text-decoration: none; margin: 0 10px;">卫生间防水</a>
+          <a href="services/wumian-fangshui.html" style="color: #FF6900; text-decoration: none; margin: 0 10px;">屋面防水</a>
+          <a href="services/waiqiang-fangshui.html" style="color: #FF6900; text-decoration: none; margin: 0 10px;">外墙防水</a>
+          <a href="services/chuanghu-fangshui.html" style="color: #FF6900; text-decoration: none; margin: 0 10px;">窗户防水</a>
+          <a href="about.html" style="color: #FF6900; text-decoration: none; margin: 0 10px;">关于我们</a>
+          <a href="contact.html" style="color: #FF6900; text-decoration: none; margin: 0 10px;">联系我们</a>
+          <a href="cases.html" style="color: #FF6900; text-decoration: none; margin: 0 10px;">成功案例</a>
+        </nav>
       </footer>
     </div>
   </body>

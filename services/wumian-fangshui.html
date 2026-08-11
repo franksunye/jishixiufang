@@ -25,8 +25,8 @@
     <meta property="og:type" content="website" />
     
     <!-- 引入样式 -->
-    <link rel="stylesheet" href="../static/css/element-ui.css" />
-    <link href="../static/css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../static/css/element-ui.css?v=20260727" />
+    <link href="../static/css/style.css?v=20260727" rel="stylesheet" />
     <link rel="icon" href="../static/image/favicon.ico" type="image/x-icon" />
     
     <!-- 结构化数据 -->
@@ -118,43 +118,95 @@
       </div>
 
       <!-- 服务套餐 -->
-      <div class="package" style="background: #f8f9fa; padding: 40px 20px;">
-        <div class="package-title">屋面防水套餐</div>
-        <div style="max-width: 800px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
-          <div class="package-item" style="background: white; border-radius: 8px; padding: 20px;">
-            <h3 style="color: #333; margin-bottom: 15px;">应急补漏套餐</h3>
-            <ul style="color: #666; line-height: 1.6;">
-              <li>适用于紧急漏水情况</li>
-              <li>快速定位漏水点</li>
-              <li>临时防水处理</li>
-              <li>1年质保</li>
-              <li>24小时内完成</li>
-            </ul>
+      <section class="pkg-tc">
+        <div class="pkg-tc-inner">
+          <div class="pkg-tc-head">
+            <h2>屋面防水 <span>· 标准化套餐</span></h2>
+            <p>一口价全包 · 签署合同零增项 · 全国直营团队上门施工</p>
+            <span class="pkg-tc-tip">严格按最新吉柿修房价格手册执行</span>
           </div>
-          
-          <div class="package-item" style="background: white; border-radius: 8px; padding: 20px;">
-            <h3 style="color: #333; margin-bottom: 15px;">标准防水套餐</h3>
-            <ul style="color: #666; line-height: 1.6;">
-              <li>适用于一般屋面防水</li>
-              <li>局部或整体防水重做</li>
-              <li>优质防水卷材施工</li>
-              <li>5年质保</li>
-              <li>3-5天完成</li>
-            </ul>
+
+          <h3 style="font-size:18px;color:#333;margin:18px 0 12px;font-weight:700;">X2 系列 · 基础防护</h3>
+          <div class="pkg-tc-grid">
+            <div class="pkg-tc-card">
+              <span class="pkg-tc-badge gray">2年质保</span>
+              <h3 class="pkg-tc-name">X2-热施工</h3>
+              <p class="pkg-tc-sub">改性沥青卷材双层错缝满粘</p>
+              <div class="pkg-tc-price">¥89<span class="unit">/㎡</span></div>
+            </div>
+            <div class="pkg-tc-card">
+              <span class="pkg-tc-badge gray">2年质保</span>
+              <h3 class="pkg-tc-name">X2-冷施工（涂料）</h3>
+              <p class="pkg-tc-sub">环保涂料冷作业</p>
+              <div class="pkg-tc-price">¥89<span class="unit">/㎡</span></div>
+            </div>
+            <div class="pkg-tc-card">
+              <span class="pkg-tc-badge gray">2年质保</span>
+              <h3 class="pkg-tc-name">X2-冷施工（卷材）</h3>
+              <p class="pkg-tc-sub">自粘卷材冷铺贴</p>
+              <div class="pkg-tc-price">¥89<span class="unit">/㎡</span></div>
+            </div>
+            <div class="pkg-tc-card">
+              <span class="pkg-tc-badge gray">2年质保</span>
+              <h3 class="pkg-tc-name">X2-外露聚脲</h3>
+              <p class="pkg-tc-sub">屋面/露台聚脲整体喷涂</p>
+              <div class="pkg-tc-price">¥298<span class="unit">/㎡</span></div>
+            </div>
           </div>
-          
-          <div class="package-item" style="background: white; border-radius: 8px; padding: 20px;">
-            <h3 style="color: #333; margin-bottom: 15px;">高级防水套餐</h3>
-            <ul style="color: #666; line-height: 1.6;">
-              <li>适用于高要求屋面</li>
-              <li>进口防水材料</li>
-              <li>多层防水保护</li>
-              <li>10年质保</li>
-              <li>7-10天完成</li>
-            </ul>
+
+          <h3 style="font-size:18px;color:#333;margin:32px 0 12px;font-weight:700;">X5 系列 · 长效防护</h3>
+          <div class="pkg-tc-grid">
+            <div class="pkg-tc-card">
+              <span class="pkg-tc-badge gold">5年质保</span>
+              <h3 class="pkg-tc-name">X5-热施工</h3>
+              <p class="pkg-tc-sub">改性沥青卷材双层错缝满粘</p>
+              <div class="pkg-tc-price">¥199<span class="unit">/㎡</span></div>
+            </div>
+            <div class="pkg-tc-card">
+              <span class="pkg-tc-badge gold">5年质保</span>
+              <h3 class="pkg-tc-name">X5-冷施工</h3>
+              <p class="pkg-tc-sub">环保冷作业工艺</p>
+              <div class="pkg-tc-price">¥199<span class="unit">/㎡</span></div>
+            </div>
+            <div class="pkg-tc-card">
+              <span class="pkg-tc-badge gold">5年质保</span>
+              <h3 class="pkg-tc-name">X5-复合施工</h3>
+              <p class="pkg-tc-sub">涂料+卷材复合夹心工艺</p>
+              <div class="pkg-tc-price">¥199<span class="unit">/㎡</span></div>
+            </div>
+            <div class="pkg-tc-card">
+              <span class="pkg-tc-badge gold">5年质保</span>
+              <h3 class="pkg-tc-name">X5-脊瓦</h3>
+              <p class="pkg-tc-sub">屋脊瓦整修节点防水</p>
+              <div class="pkg-tc-price">¥198<span class="unit">/㎡</span></div>
+            </div>
+            <div class="pkg-tc-card">
+              <span class="pkg-tc-badge gold">5年质保</span>
+              <h3 class="pkg-tc-name">X5-平瓦</h3>
+              <p class="pkg-tc-sub">平瓦屋面整体防水</p>
+              <div class="pkg-tc-price">¥168<span class="unit">/㎡</span></div>
+            </div>
           </div>
+
+          <h3 style="font-size:18px;color:#333;margin:32px 0 12px;font-weight:700;">X10 系列 · 至高10年质保</h3>
+          <div class="pkg-tc-grid">
+            <div class="pkg-tc-card">
+              <span class="pkg-tc-badge">10年质保</span>
+              <h3 class="pkg-tc-name">X10-热施工</h3>
+              <p class="pkg-tc-sub">双层错缝满粘 · 最高规格</p>
+              <div class="pkg-tc-price">¥279<span class="unit">/㎡</span></div>
+            </div>
+            <div class="pkg-tc-card">
+              <span class="pkg-tc-badge">10年质保</span>
+              <h3 class="pkg-tc-name">X10-冷施工</h3>
+              <p class="pkg-tc-sub">环保冷作业 · 最高规格</p>
+              <div class="pkg-tc-price">¥279<span class="unit">/㎡</span></div>
+            </div>
+          </div>
+
+          <p class="pkg-tc-footnote">* 实际价格以工程师上门勘察后出具的《标准化线上报价单》为准 · 服务热线 400-700-1918</p>
         </div>
-      </div>
+      </section>
 
       <!-- 施工工艺 -->
       <div class="flow" style="padding: 40px 20px;">

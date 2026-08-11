@@ -34,9 +34,9 @@
     <meta name="twitter:image" content="https://jishixiufang.com/static/image/banner.jpeg" />
 
     <!-- 引入Element样式 -->
-    <link rel="stylesheet" href="static/css/element-ui.css" />
+    <link rel="stylesheet" href="static/css/element-ui.css?v=20260727" />
     <!-- 引入自定义 -->
-    <link href="static/css/style.css" rel="stylesheet" />
+    <link href="static/css/style.css?v=20260727" rel="stylesheet" />
     <!-- 引入浏览器标签图标 -->
     <link rel="icon" href="static/image/favicon.ico" type="image/x-icon" />
     <link rel="apple-touch-icon" href="static/image/favicon.ico" />
@@ -184,25 +184,64 @@
         </div>
         <div class="form-button" @click="submit">预约免费上门勘察</div>
       </div>
-      <!-- 流程 -->
-      <div class="flow">
-        <div class="flow-title">标准化维修方案 一站式维修服务</div>
-        <div class="flow-content">
-          <div>标准化服务覆盖6大常见渗漏部位</div>
-          <div class="flow-content-pc">工程师免费上门勘察，出具勘察报告，建立维修电子档案</div>
-          <div class="flow-content-phone">工程师免费上门勘察，出具勘察报告</div>
-          <div class="flow-content-phone">建立维修电子档案</div>
-          <div>标准报价单，透明无增项</div>
+      <!-- 5S直营交付规范 -->
+      <section class="home-5s">
+        <div class="home-5s-inner">
+          <h2 class="home-5s-title">5S直营交付规范</h2>
+          <p class="home-5s-subtitle">以五大硬核标准重新定义高品质住宅修缮服务<br/>材料有国标，交付更要有高标准</p>
+          <div class="home-5s-grid">
+            <div class="home-5s-card">
+              <div class="home-5s-num"><span>1</span>S</div>
+              <h3 class="home-5s-card-title">精密勘察</h3>
+              <p class="home-5s-card-en">Scientific Detection</p>
+              <p class="home-5s-card-label pain">行业痛点</p>
+              <p class="home-5s-card-text">传统修房全凭经验和肉眼，找不到内部串水根源，"见漏补漏"屡修屡漏。</p>
+              <p class="home-5s-card-label">吉柿标准</p>
+              <p class="home-5s-card-text">推行"智能仪器检测 + 16年经验专业研判"双重科学诊断，现场出具《数字化渗漏勘察报告》。</p>
+            </div>
+            <div class="home-5s-card">
+              <div class="home-5s-num"><span>2</span>S</div>
+              <h3 class="home-5s-card-title">系统整修</h3>
+              <p class="home-5s-card-en">Systematic Restoration</p>
+              <p class="home-5s-card-label pain">行业痛点</p>
+              <p class="home-5s-card-text">水在混凝土内部具有串流特性，传统局部涂刷（打补丁）水依然改道继续流窜。</p>
+              <p class="home-5s-card-label">吉柿标准</p>
+              <p class="home-5s-card-text">坚决推行"整修不局修"理念，针对不同场景提供对症下药的标准化维修解决方案。</p>
+            </div>
+            <div class="home-5s-card">
+              <div class="home-5s-num"><span>3</span>S</div>
+              <h3 class="home-5s-card-title">透明套餐</h3>
+              <p class="home-5s-card-en">Standard Pricing</p>
+              <p class="home-5s-card-label pain">行业痛点</p>
+              <p class="home-5s-card-text">街头补漏游击队打着低价上门幌子，按斤称重、注胶漫天要价。</p>
+              <p class="home-5s-card-label">吉柿标准</p>
+              <p class="home-5s-card-text">房屋维修服务完全"产品化、方案化"，所有项目一口价计费，签署合同后零增项。</p>
+            </div>
+            <div class="home-5s-card">
+              <div class="home-5s-num"><span>4</span>S</div>
+              <h3 class="home-5s-card-title">直营交付</h3>
+              <p class="home-5s-card-en">Straight-operated Delivery</p>
+              <p class="home-5s-card-label pain">行业痛点</p>
+              <p class="home-5s-card-text">传统平台接单后层层分包转包，最终上门仍是散兵游勇式外包队，质量全靠运气。</p>
+              <p class="home-5s-card-label">吉柿标准</p>
+              <p class="home-5s-card-text">全直营模式，统一培训、严格考核的专职团队，将16年工程积累转化为标准作业指导书。</p>
+            </div>
+            <div class="home-5s-card">
+              <div class="home-5s-num"><span>5</span>S</div>
+              <h3 class="home-5s-card-title">长效质保</h3>
+              <p class="home-5s-card-en">Smart Guarantee</p>
+              <p class="home-5s-card-label pain">行业痛点</p>
+              <p class="home-5s-card-text">"修前说得天花乱坠，修完漏水人去楼空"，口头承诺易丢失，维权困难。</p>
+              <p class="home-5s-card-label">吉柿标准</p>
+              <p class="home-5s-card-text">一体化线上电子表单管理，《勘察报告》《报价单》《服务合同》《质保单》全链路数字化。</p>
+            </div>
+          </div>
+          <div class="home-5s-footer">
+            <span class="home-5s-footer-tip">依托国家高新技术企业现代修缮体系 · 16年工程实践沉淀</span>
+            <a href="about.html" class="home-5s-footer-link">了解 5S 完整规范 →</a>
+          </div>
         </div>
-        <div class="flow-steps">
-          <img src="static/image/step1.png" class="flow-step-image" alt="第一步：在线预约" />
-          <img src="static/image/step2.png" class="flow-step-image" alt="第二步：上门勘察" />
-          <img src="static/image/step3.png" class="flow-step-image" alt="第三步：制定方案" />
-          <img src="static/image/step4.png" class="flow-step-image" alt="第四步：施工维修" />
-          <img src="static/image/step5.png" class="flow-step-image" alt="第五步：验收确认" />
-          <img src="static/image/step6.png" class="flow-step-image" alt="第六步：质保服务" />
-        </div>
-      </div>
+      </section>
       <!-- 套餐 -->
       <div class="package">
         <div class="package-title">标准套餐 放心之选</div>
@@ -415,7 +454,7 @@
           // 信息渠道
           this.formData.channel = ['48', '4820', '4820030']; // 网络搜索/官网/吉柿官网
           // 信息来源
-          this.formData.exts.sourceType = '6'; // 吉柿平台单
+          this.formData.exts.sourceType = '4'; // 吉柿平台单
           // 留咨时间
           this.formData.exts.retentionDate = String(new Date().toLocaleString()).replace(
             /\//g,
